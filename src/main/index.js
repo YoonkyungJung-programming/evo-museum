@@ -18,20 +18,26 @@ function MainPage() {
     <div>
       <div id="header">
         <div id="header-area">
-          <img class="logo" src="images/logo.png" />
+          <img class="logo-img" src="images/logo.JPG" />
+          <div id="menu"></div>
         </div>
       </div>
       <div id="body">
         <div id="banner">
-          <img class="banner-img" src="images/banner1.png" />
+          <img class="banner-img" src="" />
         </div>
-        <h1>Exhibition</h1>
-        <div id="product-list">
-          <div className="product-card">
+        <h1> Exhibition </h1>
+        <div id="exhibition-list">
+          <div className="exhibition-card">
             <div>
-              <img className="product-img" src="images/banksy1.png" />
-              <div className="product-contents">
-                <span className="product-name"> 전시회1 </span>
+              <img
+                className="exhibition-img"
+                src="https://media.timeout.com/images/105611607/750/422/image.jpg"
+              />
+              <div className="exhibition-contents">
+                <span className="exhibition-name"> 전시회1 </span>
+                <span className="exhibition-artist"> 아티스트 1 </span>
+                <span className="exhibition-exp"> 설명 1 </span>
               </div>
             </div>
           </div>
