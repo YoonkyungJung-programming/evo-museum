@@ -8,7 +8,7 @@ function MainPage() {
     <div>
       <div id="header">
         <div id="header-area">
-          <img className="logo-img" src="images/logo.JPG" />
+          <img className="logo-img" src="images/logo.png" />
         </div>
       </div>
       <div id="body">
