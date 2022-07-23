@@ -14,7 +14,7 @@ function App() {
         <Route exact={true} path="/Exhibition">
           <ExhibitionPage />
         </Route>
-      </Switch>{" "}
+      </Switch>
     </div>
   );
 }
