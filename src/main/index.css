@@ -4,12 +4,6 @@
 }
 /* body 에(body라고 쓰면, *는 모두) 옆에 테두리 margin 지워줌*/
 
-#header {
-  height: 300px;
-  background-color: white;
-  /*border-bottom: 1px solid lightgray;*/
-}
-
 #header-area {
   width: 1024px;
   height: 100%;
@@ -22,34 +16,28 @@
 }
 
 .logo-img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
-#body {
-  height: 200%;
-  background-color: white;
-  width: 1024px;
-  margin: 0 auto;
-  /* 부모로부터 가운데 정렬됨 */
-  padding-bottom: 24px;
-}
-
-#body > h1 {
-  margin: 16px;
+.Title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 16 px;
   font-family: "Nunito Sans", sans-serif;
 }
 
 #exhibition-list {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .exhibition-card {
   width: 500px;
   height: 400px;
-  background-color: white;
+  background-color: #00664f;
   margin-right: 10px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -74,15 +62,12 @@
   font-size: 25px;
   font-family: "Nunito Sans", sans-serif;
   margin: 10px;
+  color: white;
 }
 
 .exhibition-exp {
   font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
   margin-left: 10px;
-}
-
-#footer {
-  height: 64px;
-  background-color: white;
+  color: white;
 }

@@ -7,14 +7,22 @@ import ExhibitionPage from "./exhibition";
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact={true} path="/">
-          <MainPageComponent />
-        </Route>
-        <Route exact={true} path="/Exhibition">
-          <ExhibitionPage />
-        </Route>
-      </Switch>
+      <div id="header">
+        <div id="header-area">
+          <img className="logo-img" src="images/logo.png" />
+        </div>
+      </div>
+      <div id="body">
+        <Switch>
+          <Route exact={true} path="/">
+            <MainPageComponent />
+          </Route>
+          <Route exact={true} path="/Exhibition">
+            <ExhibitionPage />
+          </Route>
+        </Switch>
+      </div>
+      <div id="footer"></div>
     </div>
   );
 }
