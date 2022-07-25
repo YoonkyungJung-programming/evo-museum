@@ -33,7 +33,7 @@ function ExhibitionPage() {
       <Form name="visitor" onFinish={onSubmit}>
         <Form.Item name="upload">
           <div id="upload-visitor">
-            <span> Vistior </span>
+            <span> Visitor </span>
           </div>
         </Form.Item>
         {/*방명록 -input */}
