@@ -1,17 +1,23 @@
+import "antd/dist/antd.css";
 import logo from "./logo.svg";
 import "./App.css";
 import MainPageComponent from "./main/index.js";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import ExhibitionPage from "./exhibition";
+import { Divider } from "antd";
+//import {} from '@ant-design/icons'
 
 function App() {
   return (
     <div>
       <div id="header">
         <div id="header-area">
-          <img className="logo-img" src="images/logo.png" />
+          <Link to="/">
+            <img src="images/logo.png" />
+          </Link>
         </div>
       </div>
+      <Divider />
       <div id="body">
         <Switch>
           <Route exact={true} path="/">
