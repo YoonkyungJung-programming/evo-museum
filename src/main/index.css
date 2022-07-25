@@ -36,14 +36,14 @@
   padding: 8px;
 }
 
-.exhibition-name {
+.name {
   font-size: 25px;
   font-family: "Nunito Sans", sans-serif;
   margin: 10px;
   color: white;
 }
 
-.exhibition-exp {
+.exp {
   font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
   margin-left: 10px;

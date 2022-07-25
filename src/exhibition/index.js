@@ -1,29 +1,49 @@
-import { Button, Form, Divider, Input } from "antd";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+//import { useEffect, useState } from "react";
+import React from "react";
 import "./index.css";
+import { Button, Form, Divider, Input } from "antd";
 
 function ExhibitionPage() {
-  //
   //방명록 form 함수
   const onSubmit = (values) => {
     console.log(values);
   };
-  //
+
+  //server 부분 추가
+  const { id } = useParams();
+  const [exhibition, setExhibition] = React.useState([]);
+  React.useEffect(function () {
+    axios
+      .get(`http://localhost:8080/exhibitions/${id}`)
+      .then(function (result) {
+        const exhibition = result.data.exhibition;
+        setExhibition(result.data.exhibition);
+      })
+      .catch(function (error) {
+        console.error("Error! : ", error);
+      });
+  }, []);
 
   return (
     <div>
       {/* 방명록 제외 구현 시작 */}
-      <img
-        className="Exhibition-exp-img"
-        src="https://post-phinf.pstatic.net/MjAxOTEwMjhfNDAg/MDAxNTcyMjQyMzU4ODA2.KUMHlcBR4RinjJov0AavjphuoKwpCdtTV4IxuirH3KMg.qYI-wyqe3fOOYczsVn30XI3OyAK5aJkR4wei1u6JVoEg.JPEG/banksy_exhibition.jpg?type=w1200"
-      />
-      <div className="Exhibition-exp-card">
-        <div className="Exhibition-exp-card-contents">
-          <span className="Exhibition-Title"> The Art of Banksy Online </span>
-          <span className="Exhibition-exp-card-text">
-            exhibition contents needed
-          </span>
-        </div>
-      </div>
+      {exhibition.map(function (exhibition, index) {
+        return (
+          <div>
+            <img className="Exhibition-exp-img" src={exhibition.imageUrl2} />
+            <div className="Exhibition-exp-card">
+              <div className="Exhibition-exp-card-contents">
+                <span className="Exhibition-Title"> {exhibition.name} </span>
+                <span className="Exhibition-exp-card-text">
+                  {exhibition.exp}
+                </span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
       <div className="Unreal-Engine">
         <h1> Unreal Engine Pixel Streaming</h1>
       </div>
@@ -68,6 +88,17 @@ function ExhibitionPage() {
         </Form.Item>
         {/* 방명록 구현 끝  */}
       </Form>
+      {/* Visitor-History 방명록 저장칸 */}
+      <div className="visitor-history">
+        <span> Visitor History </span>
+        <Divider />
+        <Divider />
+        <Divider />
+        <Divider />
+        <Divider />
+        <Divider />
+      </div>
+      {/* Visitor-History 방명록 저장칸 끝*/}
     </div>
   );
 }

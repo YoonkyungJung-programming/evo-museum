@@ -23,7 +23,8 @@ function App() {
           <Route exact={true} path="/">
             <MainPageComponent />
           </Route>
-          <Route exact={true} path="/Exhibition">
+          {/*<Route exact={true} path="/Exhibition">*/}
+          <Route exact={true} path="/exhibitions/:id">
             <ExhibitionPage />
           </Route>
         </Switch>
