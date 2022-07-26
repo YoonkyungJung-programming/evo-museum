@@ -18,7 +18,6 @@ function ExhibitionPage() {
     axios
       .get(`http://localhost:8080/exhibitions/${id}`)
       .then(function (result) {
-        const exhibition = result.data.exhibition;
         setExhibition(result.data.exhibition);
       })
       .catch(function (error) {
@@ -28,22 +27,15 @@ function ExhibitionPage() {
 
   return (
     <div>
-      {/* 방명록 제외 구현 시작 */}
-      {exhibition.map(function (exhibition, index) {
-        return (
-          <div>
-            <img className="Exhibition-exp-img" src={exhibition.imageUrl2} />
-            <div className="Exhibition-exp-card">
-              <div className="Exhibition-exp-card-contents">
-                <span className="Exhibition-Title"> {exhibition.name} </span>
-                <span className="Exhibition-exp-card-text">
-                  {exhibition.exp}
-                </span>
-              </div>
-            </div>
+      <div>
+        <img className="Exhibition-exp-img" src={exhibition.imageUrl2} />
+        <div className="Exhibition-exp-card">
+          <div className="Exhibition-exp-card-contents">
+            <span className="Exhibition-Title"> {exhibition.name} </span>
+            <span className="Exhibition-exp-card-text">{exhibition.exp2}</span>
           </div>
-        );
-      })}
+        </div>
+      </div>
       <div className="Unreal-Engine">
         <h1> Unreal Engine Pixel Streaming</h1>
       </div>
