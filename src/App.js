@@ -29,6 +29,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Divider />
       <div id="footer"></div>
     </div>
   );

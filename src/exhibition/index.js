@@ -5,6 +5,7 @@ import React from "react";
 import "./index.css";
 import { Button, Form, Divider, Input } from "antd";
 import { API_URL } from "../config/const.js";
+import dayjs from "dayjs";
 
 function ExhibitionPage() {
   //server 부분 추가
@@ -99,13 +100,14 @@ function ExhibitionPage() {
       {/* Visitor-History 방명록 저장칸 */}
       <div className="visitor-history">
         <span> Visitor History </span>
+        <Divider />
         {/*visitor목록 불러오기 */}
         {visitor.map(function (e, index) {
           return (
             <div>
               <span className="visitor-name">{e.visitor_name} | </span>
               <span className="visitor-text">
-                {e.text} ({e.createdAt})
+                {e.text} ({dayjs(e.createdAt).format("YYYY/MM/DD")})
               </span>
             </div>
           );
@@ -113,7 +115,6 @@ function ExhibitionPage() {
         {/*visitor목록 불러오기 끝*/}
       </div>
       {/* Visitor-History 방명록 저장칸 끝*/}
-      <Divider />
     </div>
   );
 }
