@@ -12,7 +12,6 @@ function ExhibitionPage() {
   const [exhibition, setExhibition] = React.useState([]);
   const [visitor, setVisitor] = React.useState([]);
 
-  //useEffect
   React.useEffect(function () {
     axios
       .get(`${API_URL}/exhibitions/${id}`)
