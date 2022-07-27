@@ -39,7 +39,7 @@
   font-size: 30px;
   font-weight: bolder;
   font-family: "Nunito Sans", sans-serif;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 .upload-name {
@@ -64,14 +64,31 @@
 }
 
 .visitor-history {
-  padding: 10px;
-  font-size: 18px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 25px;
   font-weight: bold;
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
   height: 300px;
-  background-color: white;
+  background-color: whitesmoke;
+   {
+    /*
   border: 1px;
   border-style: solid;
   border-color: whitesmoke;
+  */
+  }
+}
+
+.visitor-name {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.visitor-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
 }

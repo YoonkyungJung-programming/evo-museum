@@ -7,22 +7,40 @@ import { Button, Form, Divider, Input } from "antd";
 import { API_URL } from "../config/const.js";
 
 function ExhibitionPage() {
-  //방명록 form 함수
-  const onSubmit = (values) => {};
-
   //server 부분 추가
   const { id } = useParams();
   const [exhibition, setExhibition] = React.useState([]);
+  const [visitor, setVisitor] = React.useState([]);
+
+  //useEffect
   React.useEffect(function () {
     axios
       .get(`${API_URL}/exhibitions/${id}`)
       .then(function (result) {
         setExhibition(result.data.exhibition);
+        setVisitor(result.data.visitor);
       })
       .catch(function (error) {
         console.error("Error! : ", error);
       });
   }, []);
+
+  //Vistor form Submit 함수
+  const onSubmit = (values) => {
+    axios
+      .post(`${API_URL}/exhibitions/${id}`, {
+        exhibition_id: id,
+        visitor_name: values.visitor,
+        text: values.text,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  //
 
   return (
     <div>
@@ -82,14 +100,21 @@ function ExhibitionPage() {
       {/* Visitor-History 방명록 저장칸 */}
       <div className="visitor-history">
         <span> Visitor History </span>
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
+        {/*visitor목록 불러오기 */}
+        {visitor.map(function (e, index) {
+          return (
+            <div>
+              <span className="visitor-name">{e.visitor_name} | </span>
+              <span className="visitor-text">
+                {e.text} ({e.createdAt})
+              </span>
+            </div>
+          );
+        })}
+        {/*visitor목록 불러오기 끝*/}
       </div>
       {/* Visitor-History 방명록 저장칸 끝*/}
+      <Divider />
     </div>
   );
 }
