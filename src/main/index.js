@@ -2,12 +2,13 @@ import React from "react";
 import "./index.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { API_URL } from "../config/const.js";
 
 function MainPage() {
   const [exhibitions, setExhibitions] = React.useState([]);
   React.useEffect(function () {
     axios
-      .get("http://localhost:8080/exhibitions")
+      .get(`${API_URL}/exhibitions`)
       .then(function (result) {
         const exhibitions = result.data.exhibitions;
         setExhibitions(exhibitions);

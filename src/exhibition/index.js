@@ -4,19 +4,18 @@ import axios from "axios";
 import React from "react";
 import "./index.css";
 import { Button, Form, Divider, Input } from "antd";
+import { API_URL } from "../config/const.js";
 
 function ExhibitionPage() {
   //방명록 form 함수
-  const onSubmit = (values) => {
-    console.log(values);
-  };
+  const onSubmit = (values) => {};
 
   //server 부분 추가
   const { id } = useParams();
   const [exhibition, setExhibition] = React.useState([]);
   React.useEffect(function () {
     axios
-      .get(`http://localhost:8080/exhibitions/${id}`)
+      .get(`${API_URL}/exhibitions/${id}`)
       .then(function (result) {
         setExhibition(result.data.exhibition);
       })
