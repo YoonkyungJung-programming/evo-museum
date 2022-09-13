@@ -53,10 +53,11 @@ function ExhibitionPage() {
           </div>
         </div>
       </div>
+      {/* 언리얼엔진 시작*/}
       <div className="Unreal-Engine">
         <h1> Unreal Engine Pixel Streaming</h1>
       </div>
-      {/* 방명록 제외 구현 완료 */}
+      {/* 언리얼엔진 끝*/}
       {/* 방명록 구현 시작  */}
       <Divider />
       <Form name="visitor" onFinish={onSubmit}>
@@ -105,7 +106,7 @@ function ExhibitionPage() {
         {visitor.map(function (e, index) {
           return (
             <div>
-              <span className="visitor-name">{e.visitor_name} | </span>
+              <span className="visitor-name">{e.visitor_name} </span>
               <span className="visitor-text">
                 {e.text} ({dayjs(e.createdAt).format("YYYY/MM/DD")})
               </span>
