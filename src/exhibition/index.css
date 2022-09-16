@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 24px;
+  color: whitesmoke;
 }
 
 .Exhibition-exp-card {
@@ -21,18 +22,15 @@
   margin-right: 10px;
   margin-bottom: 15px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Exhibition-exp-card-text {
   font-size: 15px;
   margin-left: 20px;
   font-family: "Nunito Sans", sans-serif;
-}
-
-.Unreal-Engine {
-  width: 100%;
-  height: 600px;
-  background-color: skyblue;
 }
 
 #upload-visitor {
