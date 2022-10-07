@@ -45,16 +45,14 @@ function ExhibitionPage() {
   return (
     <div>
       <div>
+        {/* 언리얼엔진 시작*/}
+        <a href={exhibition.unrealUrl}>
+          <span> Unreal Engine </span>
+        </a>
+        {/* 언리얼엔진 끝*/}
         <img className="Exhibition-exp-img" src={exhibition.imageUrl2} />
-        <div className="Exhibition-exp-card">
-          <div className="Exhibition-exp-card-contents">
-            {/* 언리얼엔진 버튼 시작*/}
-            <a href={exhibition.unrealUrl}>
-              <span className="Exhibition-Title"> {exhibition.name} </span>
-            </a>
-            {/* 언리얼엔진 버튼 끝*/}
-            <span className="Exhibition-exp-card-text">{exhibition.exp2}</span>
-          </div>
+        <div className="Unreal-Engine">
+          {/*<span className="Exhibition-exp-card-text">{exhibition.exp2}</span> */}
         </div>
       </div>
       {/* 방명록 구현 시작  */}

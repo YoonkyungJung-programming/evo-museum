@@ -1,9 +1,10 @@
-.Title {
+/*.Title {
   font-size: 30px;
   font-weight: bold;
   margin: 16 px;
   font-family: "Nunito Sans", sans-serif;
 }
+*/
 
 #exhibition-list {
   margin-top: 20px;
@@ -38,15 +39,16 @@
 }
 
 .name {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Nunito Sans", sans-serif;
-  margin: 10px;
+  font-weight: bold;
   color: black;
 }
 
 .exp {
   font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
-  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 5px;
   color: black;
 }

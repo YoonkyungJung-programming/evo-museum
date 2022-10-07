@@ -20,7 +20,7 @@ function MainPage() {
 
   return (
     <div>
-      <span className="Title"> Exhibition List </span>
+      {/*<span className="Title"> Exhibition List </span>*/}
       <div id="exhibition-list">
         {exhibitions.map(function (exhibition, index) {
           return (
