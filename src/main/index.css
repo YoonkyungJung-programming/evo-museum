@@ -1,8 +1,9 @@
-/*.Title {
+/*
+  .Title {
   font-size: 30px;
   font-weight: bold;
   margin: 16 px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 */
 
@@ -10,16 +11,21 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: left;
 }
 
 .exhibition-card {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: 300px;
   background-color: white;
   margin-right: 10px;
   margin-bottom: 10px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .exhibition-link {
@@ -29,26 +35,29 @@
 
 .exhibition-img {
   height: 280px;
-  width: 100%;
+  width: 500px;
 }
 
 .exhibition-contents {
+  width: 520px;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   padding: 8px;
 }
 
 .name {
-  font-size: 20px;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 5px;
   color: black;
 }
 
 .exp {
-  font-size: 15px;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  margin-top: 5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  padding: 10px;
   color: black;
 }

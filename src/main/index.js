@@ -33,11 +33,11 @@ function MainPage() {
                 <div>
                   <img className="exhibition-img" src={exhibition.imageUrl} />
                 </div>
-                <div className="exhibition-contents">
-                  <span className="name">{exhibition.name}</span>
-                  <span className="exp">{exhibition.exp}</span>
-                </div>
               </Link>
+              <div className="exhibition-contents">
+                <span className="name">{exhibition.name}</span>
+                <span className="exp">{exhibition.exp}</span>
+              </div>
             </div>
           );
         })}

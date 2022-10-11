@@ -96,9 +96,9 @@ function ExhibitionPage() {
         {/* 방명록 구현 끝  */}
       </Form>
       {/* Visitor-History 방명록 저장칸 */}
+      <Divider />
       <div className="visitor-history">
         <span> Visitor History </span>
-        <Divider />
         {/*visitor목록 불러오기 */}
         {visitor.map(function (e, index) {
           return (

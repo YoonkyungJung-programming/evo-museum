@@ -39,7 +39,7 @@
 #upload-visitor {
   font-size: 30px;
   font-weight: bolder;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   padding-bottom: 0px;
 }
 
@@ -50,7 +50,7 @@
 .upload-label {
   font-size: 18px;
   font-weight: bold;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #upload-text {
@@ -59,17 +59,16 @@
 
 #submit-button {
   float: right;
-  background-color: #00664f;
+  background-color: gray;
   color: white;
   border: none;
 }
 
 .visitor-history {
-  padding-left: 10px;
   padding-top: 10px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 100%;
   height: 300px;
   background-color: white;
@@ -83,13 +82,13 @@
 }
 
 .visitor-name {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: bold;
 }
 
 .visitor-text {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: lighter;
 }
