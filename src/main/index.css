@@ -50,11 +50,20 @@
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: bolder;
+  margin-bottom: 40px;
   padding: 5px;
   color: black;
 }
 
 .exp {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  color: black;
+}
+
+.exp2 {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;

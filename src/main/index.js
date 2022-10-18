@@ -37,6 +37,7 @@ function MainPage() {
               <div className="exhibition-contents">
                 <span className="name">{exhibition.name}</span>
                 <span className="exp">{exhibition.exp}</span>
+                <span className="exp2">{exhibition.exp2} </span>
               </div>
             </div>
           );

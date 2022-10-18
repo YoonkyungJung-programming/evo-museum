@@ -47,7 +47,7 @@ function ExhibitionPage() {
       <div>
         <div className="Unreal-Engine">
           <a href={exhibition.unrealUrl}>
-            <span> Enter Exhibition </span>
+            <span>Enter Exhibition</span>
             {/*<span className="Exhibition-exp-card-text">{exhibition.exp2}</span> */}
           </a>
         </div>
